@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css">
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<!-- BOOTSTRAP JUMBOTRON -->
+</head>
+<body>
+<div class="container">
+<div class="jumbotron jumbotron-fluid">
+<h1 class="display-4">CODING QUIZ DASHBOARD</h1>
+</div>
+
+<!-- start btn and timer -->
+
+<div class="container">
+<div class="row">
+<div class="col-8">  
+
+
+<button class="btn btn-outline-secondary" onclick="myStart()"type="button" class="btn btn-link">Click Start</button>
+    <div id="main"></div>
+    
+ <div id="pnTs">
+<input type="text" class="form-control" placeholder="POINTS" >
+ </div>
+
+       
+
+<!-- questions -->
+
+<form>
+ 
+<input type="text" class="form-control" id="timer" placeholder="questions">
+<div id="questionS">
+<!-- <div class="q1"></div>
+<div class="q2"></div>
+<div class="q3"></div>
+<div class="q4"></div>
+<div class="q5"></div>
+<div class="q6"></div> -->
+
+  <div id="quest"></div>
+
+ <div id="choicE1"></div>
+  <div id="choice2"></div>
+   <div id="choice3"></div>
+<div id="anwser"></div>
+
+</div>
+
+<!-- CORRECT answers -->
+
+<div id="anwserS">
+<div class="a1"></div>
+<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="nxtQuest()"type="button">
+<div class="a2"></div>
+<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="nxtQuest()"type="button">
+<!-- <div class="a3"></div>
+<input type="text" class="form-control" id="timer" placeholder="anwser choices" onclick="nxtQuest()"type="button"> -->
+
+<!-- WRONG answers -->
+
+<div id="anwserW">
+<div class="a1"></div>
+<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="score()"type="button">
+<div class="a2"></div>
+<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="score()"type="button">
+
+
+
+<!-- <div class="a3"></div>
+<div class="a4"></div>
+<div class="a5"></div>
+<div class="a6"></div> -->
+</div>
+
+</form>
+</div>
+
+<div class="col-4">
+
+
+<form>
+<button class="btn btn-outline-secondary" onclick="myWeather()"type="button" class="btn btn-link">Next</button>
+<div id="endGame">
+
+
+</div>
+  
+</form>
+</div>
+
+<!-- container divs-->
+</div>
+</div>
+
+
+
+
+
+<!-- action form taken from: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_action -->
+<!-- <div class="row">
+<div class="col-8">
+<h1>User Info Database</h1>
+
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="submit" value="Submit">
+</form> -->
+
+
+
+
+    </div>
+    </div>
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

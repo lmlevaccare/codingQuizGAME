@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-
+<link href="style.css">
 <!-- BOOTSTRAP JUMBOTRON -->
 </head>
 <body>
@@ -22,111 +23,60 @@
 <div class="row">
 <div class="col-8">  
 
-
+<!-- start btn and timer -->
+<!-- <button class="btn btn-outline-secondary" id="stBtn" type="button" class="btn btn-link">Click Start</button> -->
 <button class="btn btn-outline-secondary" onclick="myStart()"type="button" class="btn btn-link">Click Start</button>
-    <div id="main"></div>
-    
- <div id="pnTs">
-<input type="text" class="form-control" placeholder="POINTS" >
- </div>
+    <div id="start"></div>
 
-       
+<br>
+<!-- SCORECARD -->
+<div id="scoreCard"></div>
+ <h4>SCORE-CARD: <span id="count"></span></h4>
+
 
 <!-- questions -->
 
 <form>
- 
-<input type="text" class="form-control" id="timer" placeholder="questions">
-<div id="questionS">
-<!-- <div class="q1"></div>
-<div class="q2"></div>
-<div class="q3"></div>
-<div class="q4"></div>
-<div class="q5"></div>
-<div class="q6"></div> -->
-
-  <div id="quest"></div>
-
- <div id="choicE1"></div>
-  <div id="choice2"></div>
-   <div id="choice3"></div>
-<div id="anwser"></div>
+  <br>
+<h4>QUESTIONS</h4>
+<div type="text" id="questionS" type="button" placeholder="Question"></button></div>
 
 </div>
 
-<!-- CORRECT answers -->
+<!-- QUESTIONS CHOICES -->
 
-<div id="anwserS">
-<div class="a1"></div>
-<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="nxtQuest()"type="button">
-<div class="a2"></div>
-<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="nxtQuest()"type="button">
-<!-- <div class="a3"></div>
-<input type="text" class="form-control" id="timer" placeholder="anwser choices" onclick="nxtQuest()"type="button"> -->
+<div id="multiChoice" onclick="nxtQuest()" type="button">
 
-<!-- WRONG answers -->
+<div class="chA"></div>
+<button class="btn btn-outline-secondary ansBTN" id="choiceA" type="button" placeholder="anwser choiceA"></button>
 
-<div id="anwserW">
-<div class="a1"></div>
-<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="score()"type="button">
-<div class="a2"></div>
-<input type="text" class="form-control" id="timer" placeholder="anwser choices"onclick="score()"type="button">
+<div class="chB"></div>
+<button class="btn btn-outline-secondary ansBTN" id="choiceB" type="button" placeholder="anwser choiceB"></button>
 
+<div class="chC"></div>
+<button class="btn btn-outline-secondary ansBTN" id="choiceC" type="button" placeholder="anwser choiceC"></button>
 
-
-<!-- <div class="a3"></div>
-<div class="a4"></div>
-<div class="a5"></div>
-<div class="a6"></div> -->
 </div>
-
 </form>
 </div>
+
+<!-- local stoarge -->
 
 <div class="col-4">
 
 
 <form>
-<button class="btn btn-outline-secondary" onclick="myWeather()"type="button" class="btn btn-link">Next</button>
-<div id="endGame">
+
 
 
 </div>
   
-</form>
-</div>
-
 <!-- container divs-->
 </div>
 </div>
-
-
-
-
-
-<!-- action form taken from: https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_form_action -->
-<!-- <div class="row">
-<div class="col-8">
-<h1>User Info Database</h1>
-
-<form action="/action_page.php">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" value="Submit">
-</form> -->
-
-
-
-
-    </div>
-    </div>
-</div>
-
-
 
 <script src="script.js"></script>
 
 </body>
 </html>
+

@@ -1,68 +1,147 @@
 
 
 
+var secondsLeft = 60;
 
-var inputs = document.getElementById(".main")
+var ansBTn = document.querySelectorAll("ansBTN");
+var nxtBtn = document.getElementById("nxtBtn");
+// var startBtn = document.getElementById("stBtn");
+// var inputs = document.getElementById("start")
 
+var questionContainer = document.getElementById("questionS");
+var indexCorrect=[]
 
-var secondsLeft = 10;
-
-function myStart() {
-  var timerInterval = setInterval(function() {
-    secondsLeft--;
-    main.textContent = secondsLeft;
-
-    if(secondsLeft === 0) {
-      clearInterval(timerInterval);
-     alert("Game-Over");
-    }
-      
-   
-      
-
-  }, 1000);
-}
-
-//  var minusT = document.getElementById("timer");
-
-// function nxtQuest() {   
-// }
-
-// nxtQuest();
-
-// function score(myTimer) {
-//  var d = setInterval(myTimer, 1000);
-//         document.getElementById("pnTs").innerHTML = d;
-//     
+var choicesContainer = document.getElementById("multiChoice")
+var choiceA = document.getElementById("choiceA");
+var choiceB = document.getElementById ("choiceB");
+var choiceC = document.getElementById("choiceC");
 
 
-var questions = document.getElementById("quest");
-var choices = document.getElementById("choicE1");
-var choices = document.getElementById("choice2");
-var choices = document.getElementById ("choice3");
-var answers = document.getElementById("anwser");
 
-var correctA = [];
-var wrongA = [];
 
+// QUESTIONS
 
 let question1 = {
-    quest1: "What is Stella?",
-    choice1: ["a large dog", "cat", "goat"],
-    // choice2: "cat",
-    // choice3: "goat",
-    answer1: "dog"
-};
+questionContainer: "Where is the text of the title tag displayed?",
+choicesContainer: ["title bar", "body tag", "nav bar"],
+indexCorrect: 0
+}
+
+let question2 = {
+questionContainer: "what is stella?",
+choicesContainer: ["g", "d", "p"],
+indexCorrect: 0
+}
 
 
-// for (let i = 0; i < question1.choice1.length; i++) {
-//     alert(question1.choice1[i]);
-//     return this.choice1;
+//  START BTN ACTIVATED TIMER
+
+function myStart() {
+
+var timerInterval = setInterval(function() {
+secondsLeft--;
+start.textContent = secondsLeft;
+
+if(secondsLeft === 0) {
+clearInterval(timerInterval);
+alert("Game-Over");
+}
+
+         
+}, 1000);
+
+  questionS.innerHTML = question1.questionContainer;
+  choiceA.innerHTML = question1.choicesContainer[0];
+  choiceB.innerHTML = question1.choicesContainer[1];
+  choiceC.innerHTML = question1.choicesContainer[2];
+}
+
+function nxtBtn() {
+
+  if (choiceA, choiceB, choiceC) {
+      questionS.innerHTML = question1.questionContainer;
+  }
+
+
+
+
+}
+
+// startBtn.addEventListener("click",myStart());
+
+// WHEN A USER CLICKS ON THE BUTTN WITH THE CLASS ANS BTN  
+// IS THE USER RIGHT OR WRONG
+// IF RIGHT GET PNT AND ADV
+// IF WRONG MINUS TIMECLK  secondsleft minus 5 AND ADV 
+
+// ADD ARRAY OF ANS OBJECT
+// GET NEXT QUEST - ARRAY OF QUEST OBJ
+
+    
+// QUIZ QUESTIONS
+
+// var userQuess = function myChoice() {
+
+//   if (userQuess ===) {
+
+//   }
+
 // }
 
-quest.textContent = question1.quest1;
-choicE1.textContent = question1.choice1;
-choice2.textContent = question1.choice2;
-choice3.textContent = question1.choice3;
 
+
+
+
+// var answersFalse = []
+
+
+
+
+// // quest.textContent = question1.quest1;
+// anwsersF.textContent = question1.choice1;
+// anwsersF.textContent = question1.choice2;
+// anwsersT.textContent = question1.choice3;
+// // function questions()
+
+// // for (let i = 0; i < question1.length; i++) {
+// //     question1[i];
+// //     var nextQ = question1.push(quest1);
+// //     quest.textContent = question1.push(quest1);
+  
+// // }
+
+// //  console.log(question1)
+// // // for (let i = 0; i < question1.choice1.length; i++) {
+// // // (question1.choice1[i]);
+    
+    
+// // // }
+
+// // function nxtQuest(question) {
+ 
+// // }
+ 
+
+// var count = 0;
+// var pointScore = document.querySelector("#point");
+// // var decrementEl = document.querySelector("#decrement");
+// var countEl = document.querySelector("#count");
+
+// function myPoint(answersF, answersT) {
+//   countEl.textContent = count;
+//   let answersF = false;
+//   let answersT = true;
+
+//   if (answersT) {pointScore.addEventListener("click", function() {
+//     count++;
+//     alert("correct");
+//   setCounterText();
+// });
+
+
+//   }
+//   else if (answersF) {
+//   alert("wrong choice")
+//   }
+//   }
 

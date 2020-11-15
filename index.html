@@ -30,10 +30,11 @@
 
 <br>
 <!-- SCORECARD -->
-<div id="scoreCard"></div>
- <h4>SCORE-CARD: <span id="count"></span></h4>
+<div id="scoreCard">
+ 
+    <h4>SCORE-CARD: <span id="count"></span></h4>
 
-
+</div>
 <!-- questions -->
 
 <form>
@@ -45,21 +46,23 @@
 
 <!-- QUESTIONS CHOICES -->
 
-<div id="multiChoice" onclick="nxtQuest()" type="button">
+<!-- <div id="multiChoice" onclick="nxtQuest()" type="button"> -->
 
-<div class="chA"></div>
-<button class="btn btn-outline-secondary ansBTN" id="choiceA" type="button" placeholder="anwser choiceA"></button>
+<div class="chA">
+<button  id="choiceA" onclick="nxtQuest()"type="button" class="btn btn-link btn btn-outline-secondary">......</button>
 
-<div class="chB"></div>
-<button class="btn btn-outline-secondary ansBTN" id="choiceB" type="button" placeholder="anwser choiceB"></button>
+<div class="chB">
+<button  id="choiceB" onclick="nxtQuest()"type="button" class="btn btn-link btn btn-outline-secondary">......</button>
 
-<div class="chC"></div>
-<button class="btn btn-outline-secondary ansBTN" id="choiceC" type="button" placeholder="anwser choiceC"></button>
+<div class="chC">
+<button  id="choiceC" onclick="nxtQuest()" type="button" class="btn btn-link btn btn-outline-secondary">.......</button>
 
-</div>
+<!-- <button id="pnt" onclick="nxt()" type="button" class="btn btn-link btn btn-outline-secondary">points</button> -->
+
 </form>
 </div>
-
+</div>
+</div>
 <!-- local stoarge -->
 
 <div class="col-4">
@@ -76,7 +79,8 @@
 </div>
 
 <script src="script.js"></script>
-
+<script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/sprinkle.js"></script>
+<script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/jquery-1.2.6.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="<?php echo get_option('siteurl') ?>/js/jquery-ui-personalized-1.5.2.packed.js"></script>
 </body>
 </html>
-

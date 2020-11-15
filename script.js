@@ -1,40 +1,27 @@
 
-
-
 var secondsLeft = 60;
 
+var pntCard = document.getElementById("scoreCard");
+
+var indexCorrect = []
 var ansBTn = document.querySelectorAll("ansBTN");
-var nxtBtn = document.getElementById("nxtBtn");
+// var nxtBtn = document.getElementById("nxtBtn");
 // var startBtn = document.getElementById("stBtn");
 // var inputs = document.getElementById("start")
+var questionContainer = document.getElementById("questionContain");
 
-var questionContainer = document.getElementById("questionS");
-var indexCorrect=[]
+
+var count = 0;
+var pntCard = document.querySelector("#scoreCard");
+// var decrementEl = document.querySelector("#decrement");
+var countER= document.querySelector("#count");
 
 var choicesContainer = document.getElementById("multiChoice")
-var choiceA = document.getElementById("choiceA");
-var choiceB = document.getElementById ("choiceB");
-var choiceC = document.getElementById("choiceC");
+var choiceArray0 = document.getElementById("choiceA");
+var choiceArray1 = document.getElementById ("choiceB");
+var choiceArray2= document.getElementById("choiceC");
 
 
-
-
-// QUESTIONS
-
-let question1 = {
-questionContainer: "Where is the text of the title tag displayed?",
-choicesContainer: ["title bar", "body tag", "nav bar"],
-indexCorrect: 0
-}
-
-let question2 = {
-questionContainer: "what is stella?",
-choicesContainer: ["g", "d", "p"],
-indexCorrect: 0
-}
-
-
-//  START BTN ACTIVATED TIMER
 
 function myStart() {
 
@@ -56,16 +43,80 @@ alert("Game-Over");
   choiceC.innerHTML = question1.choicesContainer[2];
 }
 
-function nxtBtn() {
 
-  if (choiceA, choiceB, choiceC) {
-      questionS.innerHTML = question1.questionContainer;
+// QUESTIONS
+
+let question1 = {
+questionContainer: "Where is the text of the title tag displayed?",
+choicesContainer: ["title bar", "body tag", "nav bar"],
+// indexCorrect: 0
+}
+
+let question2 = {
+questionContainer: "what is Java Source Code is compiled into?",
+choicesContainer: ["Bytecode", "eXcode", "IDK"],
+// indexCorrect: 0
+}
+
+
+let question3 = {
+questionContainer: "How can you remove an item by index position?",
+choicesContainer: ["Splice", "hoP", "Jump"],
+// indexCorrect: 0
+}
+
+//  START BTN ACTIVATED TIMER
+
+
+
+
+function nxtQuest() {
+  questionS.innerHTML = question2.questionContainer;
+  choiceA.innerHTML = question2.choicesContainer[0];
+  choiceB.innerHTML = question2.choicesContainer[1];
+  choiceC.innerHTML = question2.choicesContainer[2];
+  
+}
+
+function setCounterText() {
+  countER.textContent = count;
+}
+
+choiceA.addEventListener("click", function() {
+  count++;
+  setCounterText();
+});
+
+choiceB.addEventListener("click", function() {
+  if(count > 0) {
+    count--;
+    setCounterText();
   }
 
 
 
+  
+}); 
+ 
 
-}
+
+
+// function setCounterText() {
+
+// }
+
+// incrementEl.addEventListener("click", function() {
+//   count++;
+//   setCounterText();
+// });
+
+// decrementEl.addEventListener("click", function() {
+//   if(count > 0) {
+//     count--;
+//     setCounterText();
+//   }
+// }); 
+
 
 // startBtn.addEventListener("click",myStart());
 
@@ -144,4 +195,3 @@ function nxtBtn() {
 //   alert("wrong choice")
 //   }
 //   }
-
